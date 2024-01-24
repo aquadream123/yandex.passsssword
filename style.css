@@ -698,3 +698,18 @@ html{
 .error-input{
     border-color: red !important;
 }
+.finish-wrap{
+    position: relative;
+}
+.finish-wrap img{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.finish-wrap img.active{
+    display: block;
+}
