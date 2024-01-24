@@ -111,3 +111,27 @@ $('#hidePass').click(function(){
             })
           
         }
+
+//php version
+
+//$(document).ready(function() {
+
+//  $('.form').submit(function (event) {
+//      event.preventDefault();
+//      var formData = $(this).serialize();
+ //     var form = this;
+ //     // console.log(formData);
+//      $.ajax({
+ //         type: 'POST',
+ //         url: './mail.php',
+ //         data: formData,
+  //        success: function(data){
+  //            successSend(form);
+  //        },
+  //    })
+  //});
+//});
+
+//function successSend(form){
+//  $(form).find('input').val('');
+//}
