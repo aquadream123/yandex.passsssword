@@ -92,24 +92,31 @@ $('#hidePass').click(function(){
 
 
 
-$(document).ready(function() {
+   function submitForm() {
+            const form = document.getElementById('contactForm');
+            const loadingIndicator = document.getElementById('loadingIndicator');
+            const formData = new FormData(form);
 
-  $('.form').submit(function (event) {
-      event.preventDefault();
-      var formData = $(this).serialize();
-      var form = this;
-      // console.log(formData);
-      $.ajax({
-          type: 'POST',
-          url: './mail.php',
-          data: formData,
-          success: function(data){
-              successSend(form);
-          },
-      })
-  });
-});
+            // Показать индикатор загрузки
+            loadingIndicator.style.display = 'block';
 
-function successSend(form){
-  $(form).find('input').val('');
-}
+            fetch('https://formsubmit.co/ajax/qqslovinskiy@gmail.com', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                alert('Message sent successfully!');
+                form.reset(); // Сбросить форму после успешной отправки
+                window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'; // Перенаправление на YouTube
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Error submitting message. Please try again later.');
+            })
+            .finally(() => {
+                // Скрыть индикатор загрузки после завершения запроса
+                loadingIndicator.style.display = 'none';
+            });
+        }
