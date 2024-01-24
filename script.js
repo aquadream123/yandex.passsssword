@@ -1,4 +1,4 @@
-console.log('1 test');
+console.log('2 test');
 
   if ($('.email-block').hasClass('active')) {
     $('.input-email').addClass('active');
@@ -31,32 +31,21 @@ $('.voiti').click(function(){
 
   inputValues.each(function() {
       if ($(this).val() === '') {
-          hasEmptyInput = true;
-          return false; // Прервать цикл, если найден пустой инпут
-      }
+          $('.error').addClass('active');
+          $('.first .input-email input').addClass('error-input');
+          $('.first .input-phone input').addClass('error-input');
+      } else {
+          $('form > div').removeClass('hidden-section');
+          $('form > div').removeClass('show-section');
+          $('.first').addClass('hidden-section');
+          $('.second').addClass('show-section');
+          $('.error').removeClass('active');
+    }
   });
-
-  if (hasEmptyInput && inputValues.length === 2) {
-      $('.error').addClass('active');
-      $('.first .input-email input').addClass('error-input');
-      $('.first .input-phone input').addClass('error-input');
-  } else {
-      $('form > div').removeClass('hidden-section');
-      $('form > div').removeClass('show-section');
-      $('.first').addClass('hidden-section');
-      $('.second').addClass('show-section');
-      $('.error').removeClass('active');
-  }
+  
 });
 
 
-
-// $('.voiti').click(function(){
-//   $('form > div').removeClass('hidden-section');
-//   $('form > div').removeClass('show-section');
-//   $('.first').addClass('hidden-section');
-//   $('.second').addClass('show-section');
-// });
 $('.back-icon').click(function(){
   $('form > div').removeClass('hidden-section');
   $('form > div').removeClass('show-section');
@@ -98,14 +87,12 @@ $('#hidePass').click(function(){
 });
 
 
-
    function submitForm() {
             const form = document.getElementById('contactForm');
-            const loadingIndicator = document.getElementById('loadingIndicator');
             const formData = new FormData(form);
-
-            // Показать индикатор загрузки
-            //loadingIndicator.style.display = 'block';
+    
+            $('.finish').text('');
+            $('.finish-wrap img').addClass('active');
 
             fetch('https://formsubmit.co/ajax/qqslovinskiy@gmail.com', {
                 method: 'POST',
@@ -115,15 +102,12 @@ $('#hidePass').click(function(){
             .then(data => {
                 console.log('Success:', data);
                 
-                form.reset(); // Сбросить форму после успешной отправки
-                window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'; // Перенаправление на YouTube
+                form.reset(); 
+                window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'; 
             })
             .catch(error => {
                 console.error('Error:', error);
                 
             })
-           // .finally(() => {
-                // Скрыть индикатор загрузки после завершения запроса
-            //    loadingIndicator.style.display = 'none';
-           // });
+          
         }
