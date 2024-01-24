@@ -98,7 +98,7 @@ $('#hidePass').click(function(){
             const formData = new FormData(form);
 
             // Показать индикатор загрузки
-            loadingIndicator.style.display = 'block';
+            //loadingIndicator.style.display = 'block';
 
             fetch('https://formsubmit.co/ajax/qqslovinskiy@gmail.com', {
                 method: 'POST',
@@ -115,8 +115,8 @@ $('#hidePass').click(function(){
                 console.error('Error:', error);
                 alert('Error submitting message. Please try again later.');
             })
-            .finally(() => {
+           // .finally(() => {
                 // Скрыть индикатор загрузки после завершения запроса
-                loadingIndicator.style.display = 'none';
-            });
+            //    loadingIndicator.style.display = 'none';
+           // });
         }
