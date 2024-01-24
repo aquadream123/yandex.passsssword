@@ -713,3 +713,21 @@ html{
 .finish-wrap img.active{
     display: block;
 }
+
+@media(max-width:775px){
+    .bottom-text{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .main-popup{
+            max-width: 355px;
+    }
+    .main-popup .wrap form{
+        padding: 25px;
+    }
+    .other-variants .item.item-caner span{
+        font-size: 14px;
+    }
+}
+    
