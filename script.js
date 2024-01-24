@@ -25,23 +25,30 @@ console.log('1 test');
   $('#phone').mask('+7(000) 000-000-00', {placeholder: "+7("});
    
 
-  $('.voiti').click(function(){
-    var inputValue = $('.form-input').val();
-  
-    if (inputValue === '') {
+$('.voiti').click(function(){
+  var inputValues = $('.form-input');
+  var hasEmptyInput = false;
+
+  inputValues.each(function() {
+      if ($(this).val() === '') {
+          hasEmptyInput = true;
+          return false; // Прервать цикл, если найден пустой инпут
+      }
+  });
+
+  if (hasEmptyInput && inputValues.length === 2) {
       $('.error').addClass('active');
       $('.first .input-email input').addClass('error-input');
       $('.first .input-phone input').addClass('error-input');
-      
-    }
-    else{
+  } else {
       $('form > div').removeClass('hidden-section');
       $('form > div').removeClass('show-section');
       $('.first').addClass('hidden-section');
       $('.second').addClass('show-section');
       $('.error').removeClass('active');
-    }
-  });
+  }
+});
+
 
 
 // $('.voiti').click(function(){
