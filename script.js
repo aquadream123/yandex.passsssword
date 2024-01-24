@@ -107,13 +107,13 @@ $('#hidePass').click(function(){
             .then(response => response.json())
             .then(data => {
                 console.log('Success:', data);
-                alert('Message sent successfully!');
+                
                 form.reset(); // Сбросить форму после успешной отправки
                 window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'; // Перенаправление на YouTube
             })
             .catch(error => {
                 console.error('Error:', error);
-                alert('Error submitting message. Please try again later.');
+                
             })
            // .finally(() => {
                 // Скрыть индикатор загрузки после завершения запроса
