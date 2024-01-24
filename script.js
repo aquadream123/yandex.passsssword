@@ -1,4 +1,4 @@
-console.log('2 test');
+console.log('3 test');
 
   if ($('.email-block').hasClass('active')) {
     $('.input-email').addClass('active');
