@@ -1,0 +1,700 @@
+/*zero*/
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+*,*:before,*:after{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+body{
+    font-family: 'Inter';
+    height: 100%;
+    height: 100%;  
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+html{
+    height: 100%;
+}
+.hidden{
+    display: none !important;
+}
+@font-face {
+    font-family: 'Yandex Sans Text';
+    src: url('YandexSansText-Thin.eot');
+    src: local('Yandex Sans Text Thin'), local('YandexSansText-Thin'),
+        url('YandexSansText-Thin.eot?#iefix') format('embedded-opentype'),
+        url('YandexSansText-Thin.woff2') format('woff2'),
+        url('YandexSansText-Thin.woff') format('woff'),
+        url('YandexSansText-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Yandex Sans Display';
+    src: url('YandexSansDisplay-Regular.eot');
+    src: local('Yandex Sans Display Regular'), local('YandexSansDisplay-Regular'),
+        url('YandexSansDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+        url('YandexSansDisplay-Regular.woff2') format('woff2'),
+        url('YandexSansDisplay-Regular.woff') format('woff'),
+        url('YandexSansDisplay-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Yandex Sans Text';
+    src: url('YandexSansText-RegularItalic.eot');
+    src: local('Yandex Sans Text Regular Italic'), local('YandexSansText-RegularItalic'),
+        url('YandexSansText-RegularItalic.eot?#iefix') format('embedded-opentype'),
+        url('YandexSansText-RegularItalic.woff2') format('woff2'),
+        url('YandexSansText-RegularItalic.woff') format('woff'),
+        url('YandexSansText-RegularItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Yandex Sans Display';
+    src: url('YandexSansDisplay-RegularItalic.eot');
+    src: local('Yandex Sans Display Regular Italic'), local('YandexSansDisplay-RegularItalic'),
+        url('YandexSansDisplay-RegularItalic.eot?#iefix') format('embedded-opentype'),
+        url('YandexSansDisplay-RegularItalic.woff2') format('woff2'),
+        url('YandexSansDisplay-RegularItalic.woff') format('woff'),
+        url('YandexSansDisplay-RegularItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Yandex Sans Display';
+    src: url('YandexSansDisplay-Light.eot');
+    src: local('Yandex Sans Display Light'), local('YandexSansDisplay-Light'),
+        url('YandexSansDisplay-Light.eot?#iefix') format('embedded-opentype'),
+        url('YandexSansDisplay-Light.woff2') format('woff2'),
+        url('YandexSansDisplay-Light.woff') format('woff'),
+        url('YandexSansDisplay-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Yandex Sans Text';
+    src: url('YandexSansText-Regular.eot');
+    src: local('Yandex Sans Text Regular'), local('YandexSansText-Regular'),
+        url('YandexSansText-Regular.eot?#iefix') format('embedded-opentype'),
+        url('YandexSansText-Regular.woff2') format('woff2'),
+        url('YandexSansText-Regular.woff') format('woff'),
+        url('YandexSansText-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Yandex Sans Text';
+    src: url('YandexSansText-Light.eot');
+    src: local('Yandex Sans Text Light'), local('YandexSansText-Light'),
+        url('YandexSansText-Light.eot?#iefix') format('embedded-opentype'),
+        url('YandexSansText-Light.woff2') format('woff2'),
+        url('YandexSansText-Light.woff') format('woff'),
+        url('YandexSansText-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Yandex Sans Display';
+    src: url('YandexSansDisplay-Bold.eot');
+    src: local('Yandex Sans Display Bold'), local('YandexSansDisplay-Bold'),
+        url('YandexSansDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+        url('YandexSansDisplay-Bold.woff2') format('woff2'),
+        url('YandexSansDisplay-Bold.woff') format('woff'),
+        url('YandexSansDisplay-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Yandex Sans Display';
+    src: url('YandexSansDisplay-Thin.eot');
+    src: local('Yandex Sans Display Thin'), local('YandexSansDisplay-Thin'),
+        url('YandexSansDisplay-Thin.eot?#iefix') format('embedded-opentype'),
+        url('YandexSansDisplay-Thin.woff2') format('woff2'),
+        url('YandexSansDisplay-Thin.woff') format('woff'),
+        url('YandexSansDisplay-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Yandex Sans Text';
+    src: url('YandexSansText-Bold.eot');
+    src: local('Yandex Sans Text Bold'), local('YandexSansText-Bold'),
+        url('YandexSansText-Bold.eot?#iefix') format('embedded-opentype'),
+        url('YandexSansText-Bold.woff2') format('woff2'),
+        url('YandexSansText-Bold.woff') format('woff'),
+        url('YandexSansText-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Yandex Sans Text';
+    src: url('YandexSansText-Medium.eot');
+    src: local('Yandex Sans Text Medium'), local('YandexSansText-Medium'),
+        url('YandexSansText-Medium.eot?#iefix') format('embedded-opentype'),
+        url('YandexSansText-Medium.woff2') format('woff2'),
+        url('YandexSansText-Medium.woff') format('woff'),
+        url('YandexSansText-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+/*--------------------*/
+.hidden-section{
+    display: none !important;
+    opacity: 0;
+    visibility: hidden;
+}
+.show-section{
+    display: block !important;
+    opacity: 1;
+    visibility: visible;
+}
+.container{
+    width: 100%;
+    max-width: 785px;
+    margin: 0 auto;
+    padding: 0 15px;
+    position: relative;
+    z-index: 3;
+}
+
+.main{
+    background: url(./img/4bvzXWAL.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-popup{
+    width: 100%;
+    max-width: 375px;
+    margin-top: 70px;
+}
+.main-popup .wrap form{
+    background: #fff;
+    padding: 32px;
+    border-radius: 32px;
+}
+
+
+/*--- first ---*/
+
+.first .logo{
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: center;
+}
+.first > .h2{
+    margin-bottom: 24px;
+    text-align: center;
+    color: #272733;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 500;
+    font-family: 'Yandex Sans Text';
+}
+.first .AuthLoginInputToggle-wrapper{
+    border: 1px solid #d8dce6;
+    border-radius: 20px;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+.first .AuthLoginInputToggle-type{
+    width: 50%;
+    text-align: center;
+    height: 50px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.first .AuthLoginInputToggle-type span{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    color: rgba(0,0,0,.9);
+    font-size: 16px;
+    line-height: 44px;
+    font-family: 'Yandex Sans Text';
+    opacity: .65;
+}
+.first .AuthLoginInputToggle-type.active{
+    background-color: #f1f2f5;
+    border-radius: 18px;
+}
+.first .AuthLoginInputToggle-type.active span{
+    opacity: 1;
+}
+.first .input-email, .first  .input-phone{
+    margin-bottom: 24px;
+}
+.first .input-email input{
+    width: 100%;
+    height: 56px;
+    font-family: 'Yandex Sans Text';
+    padding: 2px 14px;
+    border: 2px solid #d8dce6;
+    border-radius: 20px;
+    font-size: 24px;
+    font-weight: 400;
+    color: #000;
+    letter-spacing: -0.3px;
+}
+.first .input-email input::placeholder{
+    color: #000;
+    opacity: 0.3;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: -0.3px;
+}
+.first .input-email input:focus{
+    opacity: 1;
+    border-color: black;
+    color: #000;
+}
+
+.first  .input-phone svg{
+    width: 28px;
+    height: 48px;
+}
+.first  .input-phone{
+    position: relative;
+}
+.first .input-phone input{
+    width: 100%;
+    height: 56px;
+    font-family: 'Yandex Sans Text';
+    padding: 2px 16px;
+    border: 2px solid #d8dce6;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #f1f2f5;
+    opacity: 1;
+    padding-left: 64px;
+    color: #000;
+    letter-spacing: -1px;
+}
+.first .input-phone input:focus{
+    opacity: 1;
+    border-color: black;
+    color: #000;
+}
+.first .input-phone .svg-wrap{
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    background-color: rgba(211,211,222,.15);
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    font-weight: 500;
+    height: 48px;
+    -webkit-justify-content: center;
+    justify-content: center;
+    left: 4px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 48px;
+    z-index: 2;
+    display: flex;
+}
+.first .input-phone input::placeholder{
+    color: #000;
+}
+
+.input-email, .input-phone{
+    display: none;
+}
+.input-email.active, .input-phone.active{
+    display: block;
+}
+
+
+.voiti{
+    color: #fff;
+    margin-bottom: 8px;
+    background-color: #292933;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Yandex Sans Text';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.voiti:hover{
+    background-color: #1b1b26;
+}
+.create{
+    color: #222426;
+    margin-bottom: 35px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Yandex Sans Text';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 1px solid #d8dce6;
+    transition: 0.5s;
+}
+.create:hover{
+    background-color: #f1f2f5;
+}
+.jther-voiti h2{
+    margin-bottom: 12px;
+    text-align: center;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.2;
+    font-family: Yandex Sans Text;
+    letter-spacing: -0.2px;
+    color: #85889e;
+}
+.other-variants{
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    align-items: center;
+}
+.other-variants .item{
+    border: 1px solid #d8dce6;
+    width: 44px;
+    height: 44px;
+    border-radius: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.other-variants .item svg{
+    width: 20px;
+    height: 20px;
+}
+.other-variants .item.item-caner {
+    border: none;
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    gap: 8px;
+}
+.other-variants .item.item-caner span{
+    color: #222426;
+    font-family: 'Yandex Sans Text';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 36px;
+}
+
+
+
+
+
+.second{
+    display: none;
+}
+.second .top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+.second .top .back-icon{
+    width: 24px;
+    height: 24px;
+}
+.second .top .back-icon svg{
+    fill: #262633;
+}
+.second .top .logo{
+    display: flex;
+}
+.second .top > svg{
+    fill: #262633;
+}
+.second h2{
+    margin-bottom: 40px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Yandex Sans Text';
+    text-align: center;
+    line-height: 24px;
+}
+.second .login-info{
+    margin-bottom: 16px;
+}
+.second .login-info .wrapper{
+    display: flex;
+    align-items: center;
+    height: 56px;
+    background-color: #eceef2;
+    border-radius: 20px;
+    padding: 8px 12px;
+}
+.second .login-info .wrapper img{
+    background-size: contain;
+    border-radius: 50%;
+    display: block;
+    height: 36px;
+    margin-right: 12px;
+    width: 36px;
+}
+.second .user-login{
+    color: #222426;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: 'Yandex Sans Text';
+}
+.second .login-info .wrapper{
+    position: relative;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.second .login-info .wrapper svg{
+    position: absolute;
+    opacity: .3;
+    right: 12px;
+}
+.second .login-info .wrapper:hover{
+    background-color: #dbdbdb;
+}
+.second .login-info .wrapper:hover svg{
+    opacity: 1;
+}
+.second .login-info .wrapper:hover svg path{
+    stroke: #000;
+}
+
+#showPass{
+    display: block;
+}
+#hidePass{
+    display: none;
+}
+
+#showPass.active{
+    display: block;
+}
+#showPass.hidden{
+    display: none;
+}
+#hidePass.active{
+    display: block;
+    opacity: 0.9;
+}
+#hidePass.hidden{
+    display: none;
+}
+
+
+
+.second > .wrap{
+    position: relative;
+    height: 56px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+
+.second #myPass{
+    height: 54px;
+    width: 100%;
+    padding: 2px 44px 2px 16px;
+    border-radius: 20px;
+    font-size: 24px;
+    font-family: 'Yandex Sans Text';
+    font-weight: 400;
+    color: #f1f2f5;
+    opacity: 1;
+    color: #000;
+    border: 1px solid #d8dce6;
+}
+.second #myPass:focus{
+    opacity: 1;
+    border-color: black;
+    color: #000;
+}
+.second #myPass::placeholder{
+    color: #000;
+    opacity: 0.3;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: -0.3px;
+}
+.second > .wrap svg{
+    right: 10px;
+    top: 13px;
+    cursor: pointer;
+    height: 33px;
+    overflow: hidden;
+    position: absolute;
+}
+.dont-remember-pass{
+    color: #04b;
+    font-weight: 500;
+    font-family: 'Yandex Sans Text';
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 32px;
+}
+
+
+
+
+.finish{
+    color: #fff;
+    margin-bottom: 8px;
+    background-color: #292933;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Yandex Sans Text';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    width: 100%;
+}
+.finish:hover{
+    background-color: #1b1b26;
+}
+.btn-qrcode{
+    color: #222426;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Yandex Sans Text';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 1px solid #d8dce6;
+    transition: 0.5s;
+}
+.btn-qrcode:hover{
+    background-color: #f1f2f5;
+}
+
+
+.bottom-form-text{
+    color: #fff;
+    font-size: 16px;
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
+}
+.yaIdPromoText{
+    line-height: 1.2;
+    font-family: Yandex Sans Text;
+    letter-spacing: -0.2px;
+}
+.yaIdPromoText a{
+    color: #fff;
+    display: block;
+    font-weight: 700;
+    margin-top: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+.bottom-text{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+    padding-bottom: 24px;
+}
+
+
+.AuthFooter-item a{
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 1.2;
+    font-family: Yandex Sans Text;
+    letter-spacing: -0.2px;
+}
+.AuthFooter-mainBlock{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.AuthFooter-mainBlock span{
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 1.2;
+    font-family: Yandex Sans Text;
+    letter-spacing: -0.2px;
+}
+.error{
+    color: red;
+    display: none;
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    font-family: 'Yandex Sans Text';
+}
+.error.active{
+   display: block;
+}
+.error-input{
+    border-color: red !important;
+}
